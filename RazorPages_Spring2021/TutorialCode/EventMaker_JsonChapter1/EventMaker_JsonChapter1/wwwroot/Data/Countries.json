@@ -1,0 +1,17 @@
+[
+  {
+    "Code": "DK",
+    "Name": "Denmark",
+    "PopulationNumber": 7.5
+  },
+  {
+    "Code": "FR",
+    "Name": "France",
+    "PopulationNumber": 67.8
+  },
+  {
+    "Code": "SP",
+    "Name": "Spain",
+    "PopulationNumber": 60.4
+  }
+]

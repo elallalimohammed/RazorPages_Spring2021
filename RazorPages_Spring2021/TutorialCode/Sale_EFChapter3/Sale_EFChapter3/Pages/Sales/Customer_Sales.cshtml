@@ -1,0 +1,44 @@
+﻿@page
+@model Sale_EFChapter3.Pages.Sales.Customer_SalesModel
+@{
+    ViewData["Title"] = "MySales";
+}
+
+<h5>Customer sales</h5>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                SaleId
+            </th>
+            <th>
+                Product
+            </th>
+            <th>
+                Amount
+            </th>
+            <th>
+                SalesDate
+            </th>
+            <th>
+                Customer Id
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Customer!= null)
+        {
+            @foreach (var item in Model.Customer.Sales)
+            {   <tr>  
+               <td>  @item.SaleId  </td>  
+                <td>  @item.ProductName </td>
+                <td>  @item.Amount </td>
+                <td>  @item.SalesDate </td>
+                <td>  @item.CustomerId </td>                 
+                </tr>
+            }
+        }
+    </tbody>
+</table>

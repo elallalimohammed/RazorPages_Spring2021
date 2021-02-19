@@ -5,7 +5,40 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="TutorialCode\" />
+    <None Include="TutorialCode\EventMaker_EFChapter2\.vs\EventMaker_EFChapter2\config\applicationhost.config" />
+    <None Include="TutorialCode\EventMaker_EFChapter2\.vs\EventMaker_EFChapter2\DesignTimeBuild\.dtbcache" />
+    <None Include="TutorialCode\EventMaker_EFChapter2\.vs\EventMaker_EFChapter2\v16\Server\sqlite3\db.lock" />
+    <None Include="TutorialCode\EventMaker_EFChapter2\.vs\EventMaker_EFChapter2\v16\Server\sqlite3\storage.ide" />
+    <None Include="TutorialCode\EventMaker_EFChapter2\EventMaker_EFChapter2.sln" />
+    <None Include="TutorialCode\EventMaker_EFChapter2\EventMaker_EFChapter2\EventMaker_EFChapter2.csproj" />
+    <None Include="TutorialCode\EventMaker_JsonChapter1\.vs\EventMaker_JsonChapter1\config\applicationhost.config" />
+    <None Include="TutorialCode\EventMaker_JsonChapter1\.vs\EventMaker_JsonChapter1\DesignTimeBuild\.dtbcache" />
+    <None Include="TutorialCode\EventMaker_JsonChapter1\.vs\EventMaker_JsonChapter1\v16\Server\sqlite3\db.lock" />
+    <None Include="TutorialCode\EventMaker_JsonChapter1\.vs\EventMaker_JsonChapter1\v16\Server\sqlite3\storage.ide" />
+    <None Include="TutorialCode\EventMaker_JsonChapter1\EventMaker_JsonChapter1.sln" />
+    <None Include="TutorialCode\EventMaker_JsonChapter1\EventMaker_JsonChapter1\EventMaker_JsonChapter1.csproj" />
+    <None Include="TutorialCode\SaleADONet_Chapter5\.vs\SaleADONet_Chapter5\config\applicationhost.config" />
+    <None Include="TutorialCode\SaleADONet_Chapter5\.vs\SaleADONet_Chapter5\DesignTimeBuild\.dtbcache" />
+    <None Include="TutorialCode\SaleADONet_Chapter5\.vs\SaleADONet_Chapter5\v16\Server\sqlite3\db.lock" />
+    <None Include="TutorialCode\SaleADONet_Chapter5\.vs\SaleADONet_Chapter5\v16\Server\sqlite3\storage.ide" />
+    <None Include="TutorialCode\SaleADONet_Chapter5\SaleADONet_Chapter5.sln" />
+    <None Include="TutorialCode\SaleADONet_Chapter5\SaleADONet_Chapter5\SaleADONet_Chapter5.csproj" />
+    <None Include="TutorialCode\SaleEF_GenericChapter4\.vs\SaleEF_GenericChapter4\config\applicationhost.config" />
+    <None Include="TutorialCode\SaleEF_GenericChapter4\.vs\SaleEF_GenericChapter4\DesignTimeBuild\.dtbcache" />
+    <None Include="TutorialCode\SaleEF_GenericChapter4\.vs\SaleEF_GenericChapter4\v16\Server\sqlite3\db.lock" />
+    <None Include="TutorialCode\SaleEF_GenericChapter4\.vs\SaleEF_GenericChapter4\v16\Server\sqlite3\storage.ide" />
+    <None Include="TutorialCode\SaleEF_GenericChapter4\SaleEF_GenericChapter4.sln" />
+    <None Include="TutorialCode\SaleEF_GenericChapter4\SaleEF_GenericChapter4\SaleEF_GenericChapter4.csproj" />
+    <None Include="TutorialCode\Sale_EFChapter3\.vs\Sale_EFChapter3\config\applicationhost.config" />
+    <None Include="TutorialCode\Sale_EFChapter3\.vs\Sale_EFChapter3\DesignTimeBuild\.dtbcache" />
+    <None Include="TutorialCode\Sale_EFChapter3\.vs\Sale_EFChapter3\v16\Server\sqlite3\db.lock" />
+    <None Include="TutorialCode\Sale_EFChapter3\.vs\Sale_EFChapter3\v16\Server\sqlite3\storage.ide" />
+    <None Include="TutorialCode\Sale_EFChapter3\Sale_EFChapter3.sln" />
+    <None Include="TutorialCode\Sale_EFChapter3\Sale_EFChapter3\Sale_EFChapter3.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TutorialCode\EventMaker_EFChapter2\EventMaker_EFChapter2\bin\Release\netcoreapp3.1\" />
   </ItemGroup>
 
 </Project>

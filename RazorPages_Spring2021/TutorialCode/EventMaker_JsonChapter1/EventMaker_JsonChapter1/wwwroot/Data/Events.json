@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 2,
+    "Name": "CPH Marathon",
+    "Description": "All about sport",
+    "City": "CPH",
+    "DateTime": "2021-02-25T00:00:00",
+    "CountryCode": "DK"
+  },
+  {
+    "Id": 3,
+    "Name": "Tomatina",
+    "Description": "a lot of tomatoes",
+    "City": "Pempluna",
+    "DateTime": "2021-11-17T00:00:00",
+    "CountryCode": "SP"
+  },
+  {
+    "Id": 4,
+    "Name": "Eurovision",
+    "Description": " A lot of music and beers",
+    "City": "Kobenhavn N",
+    "DateTime": "2020-01-01T00:00:00",
+    "CountryCode": "Denmark"
+  }
+]
