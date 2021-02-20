@@ -1,0 +1,52 @@
+﻿@page
+@model EFCoreTeaching_RazorPages.Pages.Students.GetStudentsModel
+@{
+    ViewData["Title"] = "GetStudents";
+}
+
+<h3 style="color:red"> List of students</h3>
+<p>
+    <a asp-page="/Students/Create">Create New Student</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Student Id  </th>
+            <th> Name </th>
+            <th> Address  </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model != null)
+        {
+            @foreach (var item in Model.Students)
+            {
+        <tr>
+            <td>  @item.StudentId </td>
+            <td>  @item.Name </td>
+            <td>  @item.Address </td>
+            <td>
+                <p>
+                    <a asp-page="/Courses/GetCourses" asp-route-sid="@item.StudentId">New Enrollment</a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a asp-page="/Courses/GetCourses" asp-route-sid="@item.StudentId"> Enrolled Courses </a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a asp-page="/Students/Delete" asp-route-sid="@item.StudentId">Delete </a>
+                </p>
+            </td>
+        </tr>
+            }
+        }
+</table>
+
+
+
+
+

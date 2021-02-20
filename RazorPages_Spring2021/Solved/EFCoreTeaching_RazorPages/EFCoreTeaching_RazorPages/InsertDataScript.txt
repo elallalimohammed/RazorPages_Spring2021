@@ -1,0 +1,22 @@
+﻿
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+INSERT INTO [dbo].[Student] ([Studentid], Name], [Address]) VALUES (1, N'Allan ', N'no gade ')
+INSERT INTO [dbo].[Student] ([Studentid], Name], [Address]) VALUES (2, N'Magda ', N'Smedegade ')
+INSERT INTO [dbo].[Student] ([Studentid], Name], [Address]) VALUES (3, N'Test ', N'mørregade ')
+
+
+INSERT INTO [dbo].[Course] ([CourseId], [CourseName], [Credits]) VALUES (1, N'SWD ',  7)
+INSERT INTO [dbo].[Course] ([CourseId], [CourseName], [Credits]) VALUES (2, N'SWC ',  5)
+
+
+INSERT INTO [dbo].[Enrollment] ([StudentId], [CourseId], [Grade]) VALUES (1, 1,  4)
+INSERT INTO [dbo].[Enrollment] ([StudentId], [CourseId], [Grade]) VALUES (1, 2,  7)
+INSERT INTO [dbo].[Enrollment] ([StudentId], [CourseId], [Grade]) VALUES (2, 2,  10)
+
+

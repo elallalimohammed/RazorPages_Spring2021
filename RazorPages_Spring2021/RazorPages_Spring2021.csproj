@@ -29,6 +29,13 @@
     <None Include="Solved\EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages.sln" />
     <None Include="Solved\EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages.csproj" />
     <None Include="Solved\EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages.csproj.user" />
+    <None Include="Solved\EFCoreTeaching_RazorPages\.vs\EFCoreTeaching_RazorPages\config\applicationhost.config" />
+    <None Include="Solved\EFCoreTeaching_RazorPages\.vs\EFCoreTeaching_RazorPages\DesignTimeBuild\.dtbcache" />
+    <None Include="Solved\EFCoreTeaching_RazorPages\.vs\EFCoreTeaching_RazorPages\v16\Server\sqlite3\db.lock" />
+    <None Include="Solved\EFCoreTeaching_RazorPages\.vs\EFCoreTeaching_RazorPages\v16\Server\sqlite3\storage.ide" />
+    <None Include="Solved\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages.sln" />
+    <None Include="Solved\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages.csproj" />
+    <None Include="Solved\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages.csproj.user" />
     <None Include="TutorialCode\EventMaker_EFChapter2\.vs\EventMaker_EFChapter2\config\applicationhost.config" />
     <None Include="TutorialCode\EventMaker_EFChapter2\.vs\EventMaker_EFChapter2\DesignTimeBuild\.dtbcache" />
     <None Include="TutorialCode\EventMaker_EFChapter2\.vs\EventMaker_EFChapter2\v16\Server\sqlite3\db.lock" />
@@ -78,6 +85,13 @@
     <None Include="Unsolved\EFCoreMovie3_RazorPages\.vs\EFCoreMovie3_RazorPages\v16\Server\sqlite3\storage.ide" />
     <None Include="Unsolved\EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages.sln" />
     <None Include="Unsolved\EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages.csproj" />
+    <None Include="Unsolved\EFCoreTeaching_RazorPages\.vs\EFCoreTeaching_RazorPages\config\applicationhost.config" />
+    <None Include="Unsolved\EFCoreTeaching_RazorPages\.vs\EFCoreTeaching_RazorPages\DesignTimeBuild\.dtbcache" />
+    <None Include="Unsolved\EFCoreTeaching_RazorPages\.vs\EFCoreTeaching_RazorPages\v16\Server\sqlite3\db.lock" />
+    <None Include="Unsolved\EFCoreTeaching_RazorPages\.vs\EFCoreTeaching_RazorPages\v16\Server\sqlite3\storage.ide" />
+    <None Include="Unsolved\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages.sln" />
+    <None Include="Unsolved\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages.csproj" />
+    <None Include="Unsolved\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages.csproj.user" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,35 @@
+﻿@page
+@model EFCoreTeaching_RazorPages.Pages.Students.Student_EnrollmentsModel
+@{
+    ViewData["Title"] = "Student_Enrollments";
+}
+
+    <h3 style ="color:red">  Student_Enrollments</h3>
+        <div>
+            <dl class="row">
+                <dt class="col-sm-2">   @Html.DisplayNameFor(model => model.Student.Name)   </dt>
+                <dd class="col-sm-10">   @Html.DisplayFor(model => model.Student.Name)  </dd>
+                <dt class="col-sm-2">  @Html.DisplayNameFor(model => model.Student.Enrollments) </dt>
+                <dd class="col-sm-10">
+                    <table class="table">
+                        <tr>
+                            <th>Course Title</th>
+                            <th>Grade</th>
+                        </tr>
+                        @foreach (var item in Model.Student.Enrollments)
+                        {
+                            <tr>
+                                <td>  @Html.DisplayFor(modelItem => item.Course.CourseName)  </td>
+                                
+                                <td>@Html.DisplayFor(modelItem => item.Grade)  </td>
+                            </tr>
+                        }
+                    </table>
+                </dd>
+            </dl>
+        </div>
+
+
+
+
+

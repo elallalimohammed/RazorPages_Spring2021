@@ -1,0 +1,51 @@
+﻿@page
+@model EFCoreTeaching_RazorPages.Pages.Courses.GetCoursesModel
+@{
+    ViewData["Title"] = "GetCourses";
+}
+
+<h3>List of courses</h3>
+<p>
+    <a asp-page="/Courses/Create">Create New Course</a>
+</p>
+<h4 style="color:red"> List of courses</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Course Id  </th>
+            <th> Name </th>          
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model != null)
+        {
+            @foreach (var item in Model.Courses)
+            {
+        <tr>
+            <td> @item.CourseId </td>
+            <td>  @item.CourseName  </td>
+
+            <td>
+                <p>
+                    @{
+                        var routeValues = new Dictionary<string, string>();
+                        routeValues.Add("cid", item.CourseId.ToString());
+                        routeValues.Add("sid", Model.SId.ToString());
+                    }
+                    <a asp-page="/Enrollments/Create" asp-all-route-data="routeValues">Enroll this course</a>
+                </p>
+            </td>
+            <td>
+                 <p>
+                    <a asp-page="/Courses/Course_Enrollments" asp-route-cid="@item.CourseId"> Enrolled Students  </a>
+                </p>
+            </td>
+          
+        </tr>
+            }
+        }
+</table>
+
+
+
