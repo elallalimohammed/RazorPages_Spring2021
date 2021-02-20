@@ -1,15 +1,12 @@
 ﻿@page
 @using EventMaker_JsonChapter1.Services.Interface
 @inject  IEventService  repository
-@model EventMaker_JsonChapter1.Pages.Events.IndexModel
+@model EventMaker_JsonChapter1.Pages.Events.IndexEventModel
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>List of events </h1>
-<p>
-    <a asp-page="CreateEvent">Create New</a>
-</p>
 <div>
     <ul>
         <li> There are @repository.GetAllEventsAsync().Result.Count events</li>
@@ -25,49 +22,24 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Description
-            </th>
-            <th>
-                City
-            </th>
-            <th>
-                DateTime
-            </th>
-            <th>
-                Country Code
-            </th>
+            <th> Id </th>
+            <th> Name </th>
+            <th>Description </th>
+            <th> City </th>
+            <th> DateTime </th>
+            <th> Country Code </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.Events)
         {
         <tr>
-            <td>
-                @item.Id
-            </td>
-            <td>
-                @item.Name
-            </td>
-            <td>
-                @item.Description
-            </td>
-            <td>
-                @item.City
-            </td>
-
-            <td>
-                @item.DateTime
-            </td>
-            <td>
-                @item.CountryCode
-            </td>
+            <td>@item.Id </td>
+            <td> @item.Name </td>
+            <td> @item.Description </td>
+            <td> @item.City </td>
+            <td>@item.DateTime</td>
+            <td> @item.CountryCode </td>
             <td>
                 <a asp-page="EditEvent" asp-route-id="@item.Id">Edit</a>|
                 <a asp-page="DetailEvent" asp-route-id="@item.Id">Details</a> |

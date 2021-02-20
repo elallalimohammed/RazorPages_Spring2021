@@ -23,9 +23,9 @@ namespace EventMaker_JsonChapter1.Pages.Events
             eRepo = eService;
             Event = new Event();     
         }
-        public async Task<IActionResult>  OnGetAsync(string Code)
+        public async Task<IActionResult>  OnGetAsync(string code)
         {
-            Event.CountryCode = Code;
+            Event.CountryCode = code;
             return Page();
         }
         public async Task<IActionResult> OnPostAsync()
@@ -35,7 +35,7 @@ namespace EventMaker_JsonChapter1.Pages.Events
                 return BadRequest(ModelState);
             }
             await eRepo.AddEventAsync(Event);
-            return RedirectToPage("Index");
+            return RedirectToPage("IndexEvent");
         }
     }
 

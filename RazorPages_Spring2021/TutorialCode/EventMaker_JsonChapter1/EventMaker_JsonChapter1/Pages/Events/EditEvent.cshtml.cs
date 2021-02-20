@@ -34,7 +34,7 @@ namespace EventMaker_JsonChapter1.Pages.Events
                 return Page();
             }
             await repo.UpdateEventAsync(Event);
-            return RedirectToPage("Index");
+            return RedirectToPage("IndexEvent");
         }
     }
 }

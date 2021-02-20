@@ -28,7 +28,7 @@ namespace EventMaker_JsonChapter1.Pages.Events
         public async Task<IActionResult> OnPostAsync(int id)
         {
              await  repo.DeleteEventAsync(id);
-            return RedirectToPage("Index");
+            return RedirectToPage("IndexEvent");
         }
 
     }
