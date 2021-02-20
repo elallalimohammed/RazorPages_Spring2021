@@ -1,0 +1,38 @@
+﻿@page
+@model EFCoreMovie3_RazorPages.StudioMoviesModel
+@{
+    ViewData["Title"] = "StudioMovies";
+}
+
+<h1>Studio and its Movies</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Studio.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Studio.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Studio.Movies)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Movie Running time </th>
+                    <th>Movie Year</th>
+                </tr>
+                @foreach (var item in Model.Studio.Movies)
+                {
+            <tr>
+                <td> @Html.DisplayFor(modelItem => item.Title)</td>
+                <td> @Html.DisplayFor(modelItem => item.RunningTimeInMins) </td>
+                <td> @Html.DisplayFor(modelItem => item.Year) </td>
+            </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
