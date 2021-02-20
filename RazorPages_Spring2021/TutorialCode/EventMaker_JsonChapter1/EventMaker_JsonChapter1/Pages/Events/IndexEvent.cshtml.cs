@@ -12,7 +12,6 @@ namespace EventMaker_JsonChapter1.Pages.Events
     public class IndexEventModel : PageModel
     {
         IEventService repo;
-
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
         public IndexEventModel(IEventService repository)
