@@ -66,6 +66,13 @@
     <None Include="TutorialCode\Sale_EFChapter3\.vs\Sale_EFChapter3\v16\Server\sqlite3\storage.ide" />
     <None Include="TutorialCode\Sale_EFChapter3\Sale_EFChapter3.sln" />
     <None Include="TutorialCode\Sale_EFChapter3\Sale_EFChapter3\Sale_EFChapter3.csproj" />
+    <None Include="Unsolved\ADONetMovie_RazorPages\.vs\ADONetMovie_RazorPages\config\applicationhost.config" />
+    <None Include="Unsolved\ADONetMovie_RazorPages\.vs\ADONetMovie_RazorPages\DesignTimeBuild\.dtbcache" />
+    <None Include="Unsolved\ADONetMovie_RazorPages\.vs\ADONetMovie_RazorPages\v16\Server\sqlite3\db.lock" />
+    <None Include="Unsolved\ADONetMovie_RazorPages\.vs\ADONetMovie_RazorPages\v16\Server\sqlite3\storage.ide" />
+    <None Include="Unsolved\ADONetMovie_RazorPages\ADONetMovie_RazorPages.sln" />
+    <None Include="Unsolved\ADONetMovie_RazorPages\ADONetMovie_RazorPages\ADONetMovie_RazorPages.csproj" />
+    <None Include="Unsolved\ADONetMovie_RazorPages\ADONetMovie_RazorPages\ADONetMovie_RazorPages.csproj.user" />
     <None Include="Unsolved\EFCoreMovie1_RazorPages\.vs\EFCoreMovie1_RazorPages\config\applicationhost.config" />
     <None Include="Unsolved\EFCoreMovie1_RazorPages\.vs\EFCoreMovie1_RazorPages\DesignTimeBuild\.dtbcache" />
     <None Include="Unsolved\EFCoreMovie1_RazorPages\.vs\EFCoreMovie1_RazorPages\v16\Server\sqlite3\db.lock" />

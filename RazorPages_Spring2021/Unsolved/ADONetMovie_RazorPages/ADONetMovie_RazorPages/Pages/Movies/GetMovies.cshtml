@@ -1,0 +1,65 @@
+﻿@page
+@model ADONetMovie_RazorPages.Pages.Movies.GetMoviesModel
+@{
+    ViewData["Title"] = "GetMovies";
+}
+<h1>List of movies</h1>
+<p>
+    <a asp-page="/Movies/Create">Create New Movie</a>
+</p>
+
+<h4 style="color:red"> List of movies</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Year
+            </th>
+            <th>
+                Country
+            </th>
+            <th>
+                Studio Id
+            </th>
+            <th>
+                Actor Id
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Movies != null)
+        {
+            @foreach (var item in Model.Movies)
+            {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Title
+            </td>
+            <td>
+                @item.Year
+            </td>
+            <td>
+                @item.Country
+            </td>
+            <td>
+                @item.StudioId
+            </td>
+            <td>
+                @item.ActorId
+            </td>
+        </tr>
+            }
+        }
+</table>
+
+
