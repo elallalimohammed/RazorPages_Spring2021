@@ -10,32 +10,32 @@ namespace EventMaker_JsonChapter1.Pages.Events
 {
     public class CreateEventModel : PageModel
     {
-        IEventService eRepo;
+        
         [BindProperty]
         public Event Event { get; set; }
 
         [BindProperty]
         public string CountryCode { get; set; }
-        //public SelectList CountryCodes { get; set; }
 
-        public CreateEventModel(IEventService eService )
+        IEventService eventService;
+        public CreateEventModel(IEventService service )
         {
-            eRepo = eService;
+            eventService = service;
             Event = new Event();     
-        }
-        public async Task<IActionResult>  OnGetAsync(string Code)
-        {
-            Event.CountryCode = Code;
-            return Page();
-        }
+        }      
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            await eRepo.AddEventAsync(Event);
+            await eventService.AddEventAsync(Event);
             return RedirectToPage("Index");
+        }
+        public async Task<IActionResult> OnGetAsync(string Code)
+        {
+            Event.CountryCode = Code;
+            return Page();
         }
     }
 

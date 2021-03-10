@@ -12,7 +12,7 @@ namespace EventMaker_JsonChapter1.Services.JsonService
     public class JsonEventService: IEventService
     {
         private List<Event> events;
-        private JsonFileService<Event> jsonService { get; set; }
+        
         public IWebHostEnvironment WebHostEnvironment { get; }
         private string JsonFileName
         {
@@ -26,7 +26,8 @@ namespace EventMaker_JsonChapter1.Services.JsonService
             jsonService.FileName = JsonFileName;
             @events = jsonService.LoadAsync().Result;
         }
-    
+
+        private JsonFileService<Event> jsonService { get; set; }
         public async Task  AddEventAsync(Event evt)
         {
             evt.Id = GetId();            
