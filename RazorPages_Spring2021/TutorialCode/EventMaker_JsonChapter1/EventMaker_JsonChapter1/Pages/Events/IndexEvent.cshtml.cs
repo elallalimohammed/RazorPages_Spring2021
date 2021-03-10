@@ -12,12 +12,15 @@ namespace EventMaker_JsonChapter1.Pages.Events
     public class IndexEventModel : PageModel
     {
         IEventService repo;
+
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
         public IndexEventModel(IEventService repository)
         {
             repo = repository;
+            Events = new List<Event>();
         }
+
         public List<Event> Events { get; private set; }
         public async Task<IActionResult> OnGetAsync()
         {      
@@ -29,18 +32,14 @@ namespace EventMaker_JsonChapter1.Pages.Events
             Events = await repo.GetAllEventsAsync();
             return Page();
         }
-        public async Task<IActionResult> OnGetMyEventsAsync(string  code)
+
+        public async Task<IActionResult> OnGetMyEventsAsync(string code)
         {
-            Events = new List<Event>();
-            if (code == null)
+           if (code == null)
             {
                 return NotFound();
             }
             Events = await repo.SearchEventsByCountryCodeAsync(code);
-            if (Events == null)
-            {
-                return NotFound();
-            }
             return Page();
         }
     }

@@ -16,7 +16,7 @@ namespace EventMaker_JsonChapter1.Pages.Events
 
         [BindProperty]
         public string CountryCode { get; set; }
-        public SelectList CountryCodes { get; set; }
+        //public SelectList CountryCodes { get; set; }
 
         public CreateEventModel(IEventService eService )
         {
