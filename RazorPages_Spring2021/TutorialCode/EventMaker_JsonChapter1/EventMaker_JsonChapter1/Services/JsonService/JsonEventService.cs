@@ -12,7 +12,7 @@ namespace EventMaker_JsonChapter1.Services.JsonService
     public class JsonEventService: IEventService
     {
         private List<Event> events;
-        private JsonFileService<Event> jEventService { get; set; }
+        private JsonFileService<Event> jsonService { get; set; }
         public IWebHostEnvironment WebHostEnvironment { get; }
         private string JsonFileName
         {
@@ -21,17 +21,17 @@ namespace EventMaker_JsonChapter1.Services.JsonService
         public JsonEventService(JsonFileService<Event> jsonFileCustomerService,
                                        IWebHostEnvironment webHostEnvironment)
         {
-            jEventService = jsonFileCustomerService;
+            jsonService = jsonFileCustomerService;
             WebHostEnvironment = webHostEnvironment;
-            jEventService.FileName = JsonFileName;
-            @events = jEventService.LoadAsync().Result;
+            jsonService.FileName = JsonFileName;
+            @events = jsonService.LoadAsync().Result;
         }
     
         public async Task  AddEventAsync(Event evt)
         {
             evt.Id = GetId();            
             @events.Add(evt);
-           await  jEventService.SaveAsync(@events);
+           await  jsonService.SaveAsync(@events);
         }
 
         private int GetId()
@@ -62,7 +62,7 @@ namespace EventMaker_JsonChapter1.Services.JsonService
                     break;
                 }
             }
-           await jEventService.SaveAsync(@events);
+           await jsonService.SaveAsync(@events);
         }
         public async Task<Event> GetEventAsync(int id)
         {
@@ -91,15 +91,15 @@ namespace EventMaker_JsonChapter1.Services.JsonService
                     }
                 }
             }
-           await  jEventService.SaveAsync(@events);
+           await  jsonService.SaveAsync(@events);
         }
         public async Task<List<Event>> GetAllEventsAsync()
         {
-            return await jEventService.LoadAsync();
+            return await jsonService.LoadAsync();
         }
         public async Task<List<Event>> FilterEventsByCityAsync(string city)
         {
-            List<Event> @events = await jEventService.LoadAsync();
+            List<Event> @events = await jsonService.LoadAsync();
             List<Event> filteredList = new List<Event>();
           foreach (var ev in  @events)
             {
@@ -113,7 +113,7 @@ namespace EventMaker_JsonChapter1.Services.JsonService
 
         public async Task<List<Event>> SearchEventsByCountryCodeAsync(string code)
         {
-            List<Event> @events =await  jEventService.LoadAsync();
+            List<Event> @events =await  jsonService.LoadAsync();
             List<Event> filteredList = new List<Event>();
             foreach (var ev in @events)
             {

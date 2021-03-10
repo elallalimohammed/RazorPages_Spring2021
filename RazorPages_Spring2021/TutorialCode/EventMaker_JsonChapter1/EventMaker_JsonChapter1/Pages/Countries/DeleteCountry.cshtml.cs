@@ -12,8 +12,10 @@ namespace EventMaker_JsonChapter1.Pages.Countries
     public class DeleteCountryModel : PageModel
     {
         ICountryService repo;
+
         [BindProperty]
         public Country Country { get; set; }
+
         public DeleteCountryModel(ICountryService  repository)
         {
             repo = repository;
@@ -23,6 +25,7 @@ namespace EventMaker_JsonChapter1.Pages.Countries
             Country = await repo.GetCountryAsync(code);
             return Page();
         }
+
         public async Task<IActionResult> OnPostAsync(string code)
         {
             if (Country != null)

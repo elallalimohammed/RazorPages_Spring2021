@@ -13,7 +13,7 @@ namespace EventMaker_JsonChapter1.Services.JsonService
     public class JsonCountryService : ICountryService
     {
         private List<Country> countries;
-        private JsonFileService<Country> jsonCustomerService { get; set; }
+        private JsonFileService<Country> jsonService { get; set; }
         public IWebHostEnvironment WebHostEnvironment { get; }
         private string JsonFileName
         {
@@ -23,23 +23,22 @@ namespace EventMaker_JsonChapter1.Services.JsonService
         public JsonCountryService(JsonFileService<Country> jsonFileCustomerService,
                                        IWebHostEnvironment webHostEnvironment)
         {
-            jsonCustomerService = jsonFileCustomerService;
+            jsonService = jsonFileCustomerService;
             WebHostEnvironment = webHostEnvironment;
-            jsonCustomerService.FileName = JsonFileName;
-            countries = jsonCustomerService.LoadAsync().Result;
-           
+            jsonService.FileName = JsonFileName;
+            countries = jsonService.LoadAsync().Result;        
         }
 
         public async Task<List<Country>> GetAllCountriesAsync()
         {
-            return await jsonCustomerService.LoadAsync();
+            return await jsonService.LoadAsync();
         }
         public async Task AddCountryAsync(Country country)
         {           
             if (country != null)
             {
                 countries.Add(country);
-                await jsonCustomerService.SaveAsync(countries);
+                await jsonService.SaveAsync(countries);
             }
         }
         public async Task<Country>  GetCountryAsync(string code)
@@ -63,7 +62,7 @@ namespace EventMaker_JsonChapter1.Services.JsonService
                     break;
                 }
             }
-            await  jsonCustomerService.SaveAsync(countries); 
+            await  jsonService.SaveAsync(countries); 
         }
     }
 }
