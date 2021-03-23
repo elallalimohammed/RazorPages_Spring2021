@@ -19,7 +19,7 @@ namespace RazorPages_Spring2021
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                {
-                    webBuilder.UseStartup<Startup>();
+                   webBuilder.UseStartup<Startup>();
                 });
     }
 }
