@@ -1,0 +1,45 @@
+﻿@page
+@model EFCoreHotel_RazorPages.GetGuestsModel
+@{
+    ViewData["Title"] = "GetGuests";
+}
+<h1>List of Guests</h1>
+<form>
+    <p>
+        Search: <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Filter" />
+        <a asp-page="/Guests/GetGuests">Back to Full List </a>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Guest No </th>
+            <th>Name </th>
+            <th>Address </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Guests != null)
+        {
+            @foreach (var item in Model.Guests)
+            {
+        <tr>
+            <td> @item.GuestNo </td>
+            <td> @item.Name </td>
+            <td> @item.Address</td>
+            <td>
+                <p>
+                    <a asp-page="/Bookings/GetBookings" asp-page-handler="GuestBookings" asp-route-id="@item.GuestNo">My Bookings</a>
+                </p>
+            </td>
+        </tr>
+            }
+        }
+</table>
+
+
+
+
+

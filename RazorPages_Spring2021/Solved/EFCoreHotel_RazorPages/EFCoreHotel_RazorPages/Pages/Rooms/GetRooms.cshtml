@@ -1,0 +1,53 @@
+﻿@page
+@model EFCoreHotel_RazorPages.GetRoomsModel
+@{
+    ViewData["Title"] = "GetRooms";
+}
+
+<h1>List of  rooms</h1>
+<form  method="get">
+    <p>
+        Filter:
+        ByPrice: <input  type="text" asp-for="@Model.Room.Price" />
+        ByType: <input type="text" asp-for="@Model.Room.Types" />
+        <input type="submit" value="Filter " />
+        <a asp-page="/Rooms/GetRooms">Back to Full List </a>
+    </p> 
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Room No</th>
+            <th>Price </th>
+            <th> Types  </th>
+            <th>  Hotel No  </th>
+            </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Rooms != null)
+        {
+            @if (Model.Count != 0)
+            {
+               <p>The  number of roms is:  @Model.Count;</p>               
+            }
+            @foreach (var item in Model.Rooms)
+            {
+         <tr>
+           <td> @item.RoomNo </td>
+           <td> @item.Price </td>
+           <td> @item.Types </td>
+           <td> @item.HotelNo</td>
+           <td>
+                  <p>
+                   <a asp-page="/Bookings/GetBookings"   asp-page-handler="BookingsPerHotelPerRoom" asp-route-id1="@item.HotelNo"  asp-route-id2="@item.RoomNo">Bookings in this room and this hotel</a>
+                   </p>
+           </td>
+          </tr>
+           }
+         }
+     </table>
+
+
+
+
