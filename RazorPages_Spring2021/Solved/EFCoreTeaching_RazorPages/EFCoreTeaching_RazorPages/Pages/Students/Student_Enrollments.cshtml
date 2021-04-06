@@ -9,7 +9,9 @@
             <dl class="row">
                 <dt class="col-sm-2"> @Html.DisplayNameFor(model => model.Student.Name) </dt>
                 <dd class="col-sm-10"> @Html.DisplayFor(model => model.Student.Name) </dd>
+
                 <dt class="col-sm-2"> @Html.DisplayNameFor(model => model.Student.Enrollments) </dt>
+               
                 <dd class="col-sm-10">
                     <table class="table">
                         <tr>
@@ -19,11 +21,14 @@
                         @foreach (var item in Model.Student.Enrollments)
                         {
                             <tr>
-                                <td> @Html.DisplayFor(modelItem => item.Course.CourseName)</td>                              
+                                <td> @Html.DisplayFor(modelItem => item.Course.CourseName)</td>
                                 <td>  @Html.DisplayFor(modelItem => item.Grade)</td>
                             </tr>
                         }
                     </table>
+                    <p>Do want to enroll in another course? Please Click here:
+                        <a asp-page="/Courses/GetCourses" asp-route-sid="@Model.Student.StudentId">New Enrollment</a>
+                    </p>
                 </dd>
             </dl>
         </div>

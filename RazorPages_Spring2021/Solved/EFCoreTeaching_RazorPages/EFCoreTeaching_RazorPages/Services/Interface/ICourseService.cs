@@ -10,6 +10,7 @@ namespace EFCoreTeaching_RazorPages.Services.Interface
     {
         IEnumerable<Course> GetCourses();
         void AddCourse(Course course);
+        void DeleteCourse(Course course);
         Course GetCourse(int id);
     }
 }

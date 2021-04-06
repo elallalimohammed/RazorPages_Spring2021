@@ -1,5 +1,6 @@
 ﻿using EFCoreTeaching_RazorPages.Models;
 using EFCoreTeaching_RazorPages.Services.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace EFCoreTeaching_RazorPages.Services.EFServices
         }
         public IEnumerable<Enrollment> GetEnrollments()
         {
-            return context.Enrollments;
+            return context.Enrollments.Include(s=>s.Student).Include(c=>c.Course);
         }
         public void AddEnrollment(Enrollment enrollment)
         {

@@ -3,8 +3,6 @@
 @{
     ViewData["Title"] = "GetCourses";
 }
-
-<h3>List of courses</h3>
 <p>
     <a asp-page="/Courses/Create">Create New Course</a>
 </p>
@@ -25,7 +23,6 @@
         <tr>
             <td> @item.CourseId </td>
             <td>  @item.CourseName  </td>
-
             <td>
                 <p>
                     @{
@@ -33,15 +30,17 @@
                         routeValues.Add("cid", item.CourseId.ToString());
                         routeValues.Add("sid", Model.SId.ToString());
                     }
-                    <a asp-page="/Enrollments/Create" asp-all-route-data="routeValues">Enroll this course</a>
+                    @if (Model.SId != 0)
+                    {
+                        <a asp-page="/Enrollments/Create" asp-all-route-data="routeValues">Enroll this course</a>
+                    }
                 </p>
             </td>
             <td>
                  <p>
                     <a asp-page="/Courses/Course_Enrollments" asp-route-cid="@item.CourseId"> Enrolled Students  </a>
                 </p>
-            </td>
-          
+            </td>         
         </tr>
             }
         }

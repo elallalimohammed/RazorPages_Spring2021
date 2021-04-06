@@ -24,6 +24,12 @@ namespace EFCoreTeaching_RazorPages.Services.EFServices
             context.Students.Add(student);
             context.SaveChanges();
         }
+
+        public void DeleteStudent(Student student)
+        {
+            context.Students.Remove(student);
+            context.SaveChanges();
+        }
         public Student GetStudent(int id)
         {
           var student= context.Students

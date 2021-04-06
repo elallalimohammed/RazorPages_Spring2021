@@ -19,7 +19,6 @@ namespace EFCoreTeaching_RazorPages.Pages.Students
         public Student Student { get; set; }
         public IActionResult OnGet(int sid)
         {
-
             Student = context.GetStudent(sid);
             if (Student == null)
             {

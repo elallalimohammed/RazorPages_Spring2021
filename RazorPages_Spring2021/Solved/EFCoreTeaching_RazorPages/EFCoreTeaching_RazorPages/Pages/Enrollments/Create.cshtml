@@ -9,18 +9,8 @@
 @{
     ViewData["Title"] = "Create";
 }
-@{
-    if (Model.Enrollment.StudentId == 0)
-    {
-        < script type = "text/javascript" >
-        $(function() {
-        $("#aModal").modal('show');
-        })
-        </ script >
-    }
-}
 
-<h1>Create</h1>
+<h1>Create  an enrollment </h1>
 
 <div class="row">
     <div class="col-md-4">
@@ -44,17 +34,7 @@
                 <span asp-validation-for="@Model.Enrollment.Grade" class="text-danger"></span>
             </div>
 
-            @*<div class="form-group">
-                    <label asp-for="@Model.Movie.Year" class="control-label"></label>
-                    <input asp-for="@Model.Movie.Year" class="form-control" />
-                    <span asp-validation-for="@Model.Movie.Year" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="@Model.Movie.RunningTimeInMins" class="control-label"></label>
-                    <input asp-for="@Model.Movie.RunningTimeInMins" class="form-control" />
-                    <span asp-validation-for="@Model.Movie.RunningTimeInMins" class="text-danger"></span>
-                </div>*@
-            <div class="form-group">
+           <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

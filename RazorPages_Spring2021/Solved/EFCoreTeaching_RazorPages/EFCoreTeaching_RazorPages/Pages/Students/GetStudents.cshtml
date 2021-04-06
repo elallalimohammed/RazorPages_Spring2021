@@ -28,17 +28,12 @@
             <td>  @item.Address </td>
             <td>
                 <p>
-                    <a asp-page="/Courses/GetCourses" asp-route-sid="@item.StudentId">New Enrollment</a>
+                    <a  asp-page="/Students/Student_Enrollments" asp-route-sid="@item.StudentId"> Enrolled Courses </a>
                 </p>
             </td>
             <td>
                 <p>
-                    <a asp-page="/Courses/GetCourses" asp-route-sid="@item.StudentId"> Enrolled Courses </a>
-                </p>
-            </td>
-            <td>
-                <p>
-                    <a asp-page="/Students/Delete" asp-route-sid="@item.StudentId">Delete </a>
+                    <a asp-page="/Students/Delete" asp-route-id="@item.StudentId">Delete </a>
                 </p>
             </td>
         </tr>
